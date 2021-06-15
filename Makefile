@@ -17,11 +17,13 @@ new-machine-install: ## If the machine doesn't have the commands poetry, make, d
 
 .PHONY: airflow-local-up
 airflow-local-up: ## Runs airflow containers locally using docker-compose. Available on http://127.0.0.1:8080. Usename: user, Password: Cath123
+	dev-deploy-local
 	docker-compose -f airflow/docker-compose.yml up --force-recreate -d
 
 .PHONY: airflow-local-down
 airflow-local-down: ## Kill all airflow containers created with docker-compose.
 	docker-compose -f airflow/docker-compose.yml down -v
+	dev-clean-local
 
 # Deleta o .env e reinstala, junto com todos as receitas declaradas abaixo. Observe que ele executa 3 conjuntos.
 .PHONY: dev-fresh-build-local
