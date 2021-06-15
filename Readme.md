@@ -2,8 +2,6 @@
 
 Deploy of Airflow 2.0 using ECS Fargate and AWS CDK.
 
-Uses Airflow image from [Bitnami](https://github.com/bitnami/bitnami-docker-airflow).
-
 ## Makefile
 
 A comprehensive Makefile is available to execute common tasks. Run the following for help:
@@ -29,3 +27,7 @@ To shut it down do `make airflow-local-down` and `make dev-clean-local`
 ## AWS CDK Development
 If you wish to make changes to the infrastructure, you might need to have AWS CDK installed.  
 Please follow the [AWS guide](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html) to install it.
+
+## References
+- Uses Airflow image from [Bitnami](https://github.com/bitnami/bitnami-docker-airflow).
+- [How Bootcamp & André Sionek](https://learn.howedu.com.br/curso/engenharia-de-dados)
